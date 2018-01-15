@@ -2,7 +2,7 @@
 <div class="section">
   <h1 class="title"><%= list.title %></h1>
   <h2 class="subtitle">By <%= list.createdBy.username %></h2>
-  <% if(locals.isLoggedIn && list.belongsTo(user)) { %>
+  <% if(locals.isLoggedIn && list.belongsTo === locals.user.id) { %>
     <form method="POST" action="/lists/<%= list.id %>">
       <input type="hidden" name="_method" value="DELETE">
       <button class="button is-small">Delete list</button>
@@ -10,41 +10,47 @@
   <% } %>
   <br>
 
-  <div class="columns">
-    <ul class="column is-half">
-      <% if(list.items.length === 0) { %>
-        <p>No list items yet!</p>
-      <% } %>
 
-      <% list.items.forEach(item => { %>
-        <li class="notification is-info">
-          <%= item.description %>
-          <% if(locals.isLoggedIn && list.belongsTo(user)) { %>
-            <form method="POST" action="/lists/<%= list.id %>/items/<%= item.id %>">
-              <input type="hidden" name="_method" value="DELETE">
-              <button class="delete"></button>
-            </form>
-          <% } %>
-        </li>
-      <% }) %>
-    </ul>
-  </div>
-</div>
 
-<div class="section">
-  <div class="columns">
-    <div class="column is-one-quarter">
-      <% if(locals.isLoggedIn && list.belongsTo(user)) { %>
+      <% if(locals.isLoggedIn && list.belongsTo === locals.user.id) { %>
         <form method="POST" action="/lists/<%= list.id %>/items">
-          <div class="field">
-            <label class="label" for="description">Add a new item!</label>
-            <div class="control">
-              <input class="input" type="text" name="description" id="description" required>
-            </div>
-          </div>
+
+                  <%# <select name="select1" id="select1">
+                    <option value="instructions">- Please select a category -</option>
+                    <option value="1">Eyes</option>
+                    <option value="2">Skin</option>
+                    <option value="3">Lips</option>
+                    <option value="4">Brushes and tools</option>
+                    <option value="5">Skincare</option>
+                  </select>
+
+
+                  <select name="select2" id="select2">
+                    <option value="instructions">- Please select a product -</option>
+                    <option value="1">Mascara</option>
+                    <option value="1">Eyeliner</option>
+                    <option value="1">Eyebrow pomade</option>
+                    <option value="1">Eyeshadow palette</option>
+                    <option value="2">Primer</option>
+                    <option value="2">Foundation</option>
+                    <option value="2">Concealer</option>
+                    <option value="2">Blush</option>
+                    <option value="2">Highlighter</option>
+                    <option value="3">Nude lipstick</option>
+                    <option value="3">Red lipstick</option>
+                    <option value="4">Powder brush</option>
+                    <option value="4">Eyelash curler</option>
+                    <option value="4">Eyeshadow brush</option>
+                    <option value="4">Blush brush</option>
+                    <option value="4">Q-tips</option>
+                    <option value="4">Tweezers</option>
+                    <option value="4">Makeup wipes</option>
+                    <option value="5">Makeupremover</option>
+                    <option value="5">Moisturiser</option>
+                  </select>
+
+
+         %>
           <button class="button is-info">Add item</button>
         </form>
       <% } %>
-    </div>
-  </div>
-</div>

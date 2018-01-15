@@ -18,7 +18,7 @@ function createRoute(req, res, next) {
 
   List
     .create(req.body)
-    .then(() => res.redirect('/lists'))
+    .then((list) => res.redirect(`/lists/${list.id}`))
     .catch((err) => {
       if(err.name === 'ValidationError') return res.badRequest(`/lists/${req.params.id}/edit`, err.toString());
       next(err);

@@ -29,15 +29,15 @@
     <div class="column is-one-quarter">
       <form method="POST" action="/lists">
         <div class="form-group">
-        <select class="name" id="name" required>
+        <select class="name" id="name"  name="name" required>
   <option selected>Name your list</option>
   <option value="1">I already have</option>
   <option value="2">I want to buy</option>
 </select>
 
 
-          <select name="select1" id="select1">
-            <option value="instructions">- Please select a product -</option>
+          <%# <select name="select1" id="select1">
+            <option value="instructions">- Please select a category -</option>
             <option value="1">Eyes</option>
             <option value="2">Skin</option>
             <option value="3">Lips</option>
@@ -47,7 +47,7 @@
 
 
           <select name="select2" id="select2">
-            <option value="instructions">- Please select a category -</option>
+            <option value="instructions">- Please select a product -</option>
             <option value="1">Mascara</option>
             <option value="1">Eyeliner</option>
             <option value="1">Eyebrow pomade</option>
@@ -71,7 +71,7 @@
           </select>
 
 
-
+ %>
 
         <button class="button is-link">Add list</button>
       </form>
