@@ -25,11 +25,16 @@
 
 <div class="section">
   <h1 class="title">New list</h1>
-  <h2 class="subtitle">Create a new list by giving it a title</h2>
-
   <div class="columns">
     <div class="column is-one-quarter">
       <form method="POST" action="/lists">
+        <div class="form-group">
+        <select class="name" id="name" required>
+  <option selected>Name your list</option>
+  <option value="1">I already have</option>
+  <option value="2">I want to buy</option>
+</select>
+
 
           <select name="select1" id="select1">
             <option value="instructions">- Please select a product -</option>
