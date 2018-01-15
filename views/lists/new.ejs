@@ -1,3 +1,27 @@
+<ul class="Must-hav's">
+  <li class="list-group-item">Moisturiser</li>
+  <li class="list-group-item">Primer</li>
+  <li class="list-group-item">Concealer</li>
+  <li class="list-group-item">Foundation</li>
+  <li class="list-group-item">Eyebrow pomade</li>
+  <li class="list-group-item">Eyeliner</li>
+  <li class="list-group-item">Mascara</li>
+  <li class="list-group-item">Nude lipstick</li>
+  <li class="list-group-item">Red lipstick</li>
+  <li class="list-group-item">Blush</li>
+  <li class="list-group-item">Highlighter</li>
+  <li class="list-group-item">Eyeshadow palette</li>
+  <li class="list-group-item">Q-tips</li>
+  <li class="list-group-item">Make-up wipes</li>
+  <li class="list-group-item">Tweezers</li>
+  <li class="list-group-item">Eyelash curler</li>
+  <li class="list-group-item">Spoolie brush</li>
+  <li class="list-group-item">Powder brush</li>
+  <li class="list-group-item">Blush brush</li>
+  <li class="list-group-item">Eyeshadow brush</li>
+  <li class="list-group-item">Crease brush</li>
+
+</ul>
 
 <div class="section">
   <h1 class="title">New list</h1>
@@ -6,17 +30,44 @@
   <div class="columns">
     <div class="column is-one-quarter">
       <form method="POST" action="/lists">
-        <select name="category"> <!--Supplement an id here instead of using 'text'-->
-          <option value="value1">Value 1</option>
-          <option value="value2" selected>Value 2</option>
-          <option value="value3">Value 3</option>
-        </select>
 
-        <select name="product"> <!--Supplement an id here instead of using 'text'-->
-          <option value="value1">Value 1</option>
-          <option value="value2" selected>Value 2</option>
-          <option value="value3">Value 3</option>
-        </select>
+          <select name="select1" id="select1">
+            <option value="instructions">- Please select a product -</option>
+            <option value="1">Eyes</option>
+            <option value="2">Skin</option>
+            <option value="3">Lips</option>
+            <option value="4">Brushes and tools</option>
+            <option value="5">Skincare</option>
+          </select>
+
+
+          <select name="select2" id="select2">
+            <option value="instructions">- Please select a category -</option>
+            <option value="1">Mascara</option>
+            <option value="1">Eyeliner</option>
+            <option value="1">Eyebrow pomade</option>
+            <option value="1">Eyeshadow palette</option>
+            <option value="2">Primer</option>
+            <option value="2">Foundation</option>
+            <option value="2">Concealer</option>
+            <option value="2">Blush</option>
+            <option value="2">Highlighter</option>
+            <option value="3">Nude lipstick</option>
+            <option value="3">Red lipstick</option>
+            <option value="4">Powder brush</option>
+            <option value="4">Eyelash curler</option>
+            <option value="4">Eyeshadow brush</option>
+            <option value="4">Blush brush</option>
+            <option value="4">Q-tips</option>
+            <option value="4">Tweezers</option>
+            <option value="4">Makeup wipes</option>
+            <option value="5">Makeupremover</option>
+            <option value="5">Moisturiser</option>
+          </select>
+
+
+
+
         <button class="button is-link">Add list</button>
       </form>
     </div>
