@@ -1,0 +1,50 @@
+
+<div class="section">
+  <h1 class="title"><%= list.title %></h1>
+  <h2 class="subtitle">By <%= list.createdBy.username %></h2>
+  <% if(locals.isLoggedIn && list.belongsTo(user)) { %>
+    <form method="POST" action="/lists/<%= list.id %>">
+      <input type="hidden" name="_method" value="DELETE">
+      <button class="button is-small">Delete list</button>
+    </form>
+  <% } %>
+  <br>
+
+  <div class="columns">
+    <ul class="column is-half">
+      <% if(list.items.length === 0) { %>
+        <p>No list items yet!</p>
+      <% } %>
+
+      <% list.items.forEach(item => { %>
+        <li class="notification is-info">
+          <%= item.description %>
+          <% if(locals.isLoggedIn && list.belongsTo(user)) { %>
+            <form method="POST" action="/lists/<%= list.id %>/items/<%= item.id %>">
+              <input type="hidden" name="_method" value="DELETE">
+              <button class="delete"></button>
+            </form>
+          <% } %>
+        </li>
+      <% }) %>
+    </ul>
+  </div>
+</div>
+
+<div class="section">
+  <div class="columns">
+    <div class="column is-one-quarter">
+      <% if(locals.isLoggedIn && list.belongsTo(user)) { %>
+        <form method="POST" action="/lists/<%= list.id %>/items">
+          <div class="field">
+            <label class="label" for="description">Add a new item!</label>
+            <div class="control">
+              <input class="input" type="text" name="description" id="description" required>
+            </div>
+          </div>
+          <button class="button is-info">Add item</button>
+        </form>
+      <% } %>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,24 @@
+
+<div class="section">
+  <h1 class="title">New list</h1>
+  <h2 class="subtitle">Create a new list by giving it a title</h2>
+
+  <div class="columns">
+    <div class="column is-one-quarter">
+      <form method="POST" action="/lists">
+        <select name="category"> <!--Supplement an id here instead of using 'text'-->
+          <option value="value1">Value 1</option>
+          <option value="value2" selected>Value 2</option>
+          <option value="value3">Value 3</option>
+        </select>
+
+        <select name="product"> <!--Supplement an id here instead of using 'text'-->
+          <option value="value1">Value 1</option>
+          <option value="value2" selected>Value 2</option>
+          <option value="value3">Value 3</option>
+        </select>
+        <button class="button is-link">Add list</button>
+      </form>
+    </div>
+  </div>
+</div>

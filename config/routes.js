@@ -4,7 +4,13 @@ mongoose.Promise = require('bluebird');
 const dbURI = 'mongodb://localhost/bookstore';
 mongoose.connect(dbURI, { useMongoClient: true });
 
+
+// const sessions = require('../controllers/sessions');
+//
 const registrations = require('../controllers/registrations');
+// const lists = require('../controllers/lists');
+// const secureRoute = require('../lib/secureRoute');
+
 
 router.route('/register')
   .get(registrations.new)
@@ -26,5 +32,6 @@ router.put('/lists/:id', (req, res) => res.send('UPDATE'));
 
 router.delete('/lists/:id', (req, res) => res.send('DELETE'));
 
+router.all('*', (req, res) => res.render('statics/404'));
 
 module.exports = router;

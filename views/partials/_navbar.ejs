@@ -1,0 +1,22 @@
+<nav class="navbar has-shadow" role="navigation" aria-label="main navigation">
+  <div class="container">
+    <div class="navbar-brand">
+      <a href="/" class="navbar-item">
+        Home
+      </a>
+    </div>
+    <div class="navbar-menu is-active">
+      <div class="navbar-end">
+        <% if(locals.isLoggedIn) { %>
+          <a href="/lists" class="navbar-item">Lists</a>
+          <a href="/lists/new" class="navbar-item">Add a list</a>
+          <a href="/logout" class="navbar-item">Logout</a>
+        <% } else { %>
+          <a href="/register" class="navbar-item">Register</a>
+          <a href="/login" class="navbar-item">Login</a>
+        <% } %>
+
+            </div>
+          </div>
+        </div>
+      </nav>

@@ -1,0 +1,10 @@
+<ul class="row">
+  <% lists.forEach((list) => { %>
+    <li class="six columns">
+      <h3><%= list.name %></h3>
+      <h4><%= list.createdBy %></h4>
+      <li><%= list.products %></li>
+    </li>
+  <% }); %>
+</ul>
+<button class="u-full-width button-primary">Edit</button>

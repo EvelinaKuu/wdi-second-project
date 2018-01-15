@@ -35,7 +35,7 @@ app.use(flash());
 app.use(customResponses);
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.use(methodOverride(function (req) {
+app.use(methodOverride((req) => {
   if (req.body && typeof req.body === 'object' && '_method' in req.body) {
     const method = req.body._method;
     delete req.body._method;
