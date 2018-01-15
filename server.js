@@ -10,7 +10,6 @@ const routes         = require('./config/routes');
 const customResponses = require('./lib/customResponses');
 const authentication = require('./lib/authentication');
 const errorHandler = require('./lib/errorHandler');
-
 const app = express();
 const { port, env, dbURI } = require('./config/environment');
 
@@ -34,6 +33,7 @@ app.use(session({
 app.use(flash());
 app.use(customResponses);
 app.use(bodyParser.urlencoded({ extended: true }));
+
 
 app.use(methodOverride((req) => {
   if (req.body && typeof req.body === 'object' && '_method' in req.body) {
