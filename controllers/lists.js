@@ -105,6 +105,7 @@ function deleteItemRoute(req, res, next) {
     .then(list => {
       if (!list) return res.notFound();
       list.items.id(req.params.itemId).remove();
+
       return list.save();
     })
     .then(list => res.redirect(`/lists/${list.id}`))

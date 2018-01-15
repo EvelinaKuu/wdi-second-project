@@ -1,37 +1,48 @@
 const router = require('express').Router();
-const mongoose = require('mongoose');
-mongoose.Promise = require('bluebird');
-const dbURI = 'mongodb://localhost/bookstore';
-mongoose.connect(dbURI, { useMongoClient: true });
 
+const sessions = require('../controllers/sessions');
 
-// const sessions = require('../controllers/sessions');
-//
 const registrations = require('../controllers/registrations');
-// const lists = require('../controllers/lists');
-// const secureRoute = require('../lib/secureRoute');
+const lists = require('../controllers/lists');
+const secureRoute = require('../lib/secureRoute');
 
+
+router.get('/', (req, res) => res.render('statics/index'));
+
+router.route('/lists')
+  .get(lists.index)
+  .post(secureRoute, lists.create);
+
+router.route('/lists/new')
+  .get(secureRoute, lists.new);
+
+router.route('/lists/:id')
+  .get(lists.show)
+  .put(secureRoute, lists.update)
+  .delete(secureRoute, lists.delete);
+
+
+router.route('/lists/:id/edit')
+  .get(secureRoute, lists.edit);
+
+router.route('/lists/:id/items')
+  .post(secureRoute, lists.createItem);
+
+router.route('/lists/:id/items/:itemId')
+  .delete(secureRoute, lists.deleteItem);
 
 router.route('/register')
   .get(registrations.new)
   .post(registrations.create);
 
+router.route('/login')
+  .get(sessions.new)
+  .post(sessions.create);
 
-router.get('/', (req, res) => res.render('statics/index'));
-
-router.get('/lists', (req, res) => res.render('lists/index'));
-
-router.get('/lists/new', (req, res) => res.render('lists/new'));
-
-router.get('/lists/:id', (req, res) => res.render('lists/show'));
-
-router.get('/lists/:id/edit', (req, res) => res.render('lists/edit'));
+router.route('/logout')
+  .get(sessions.delete);
 
 
-router.put('/lists/:id', (req, res) => res.send('UPDATE'));
-
-router.delete('/lists/:id', (req, res) => res.send('DELETE'));
-
-router.all('*', (req, res) => res.render('statics/404'));
+router.all('*', (req, res) => res.notFound());
 
 module.exports = router;

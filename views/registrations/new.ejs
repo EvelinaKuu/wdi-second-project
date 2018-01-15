@@ -3,9 +3,13 @@
     <%= message %>
   </div>
 <% } %>
+<div class="section">
+  <h1 class="title">Register</h1>
 
-<form method="POST" action="/register">
-  <div class="field">
+<div class="columns">
+  <div class="column is-one-quarter">
+    <form method="POST" action="/register">
+      <div class="field">
             <label class="label" for="username">Username</label>
             <div class="control">
               <input class="input" type="text" name="username" id="username" required>
@@ -31,3 +35,6 @@
           </div>
           <button class="button is-link">Register</button>
 </form>
+</div>
+</div>
+</div>
