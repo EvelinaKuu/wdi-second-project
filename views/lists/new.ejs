@@ -33,8 +33,9 @@
         <div class="form-group">
         <select class="name" id="name" for="list" required>
   <option disabled="disabled" selected="selected">Choose a list to create</option>
-  <option value="1" id="name">I already have</option>
-  <option value="2" id="name">I want to buy</option>
+  <option  <% if(list.name === 'I already have') { %>selected<% } %>>>I already have</option>
+  <option  <% if(list.name === 'I want to buy') { %>selected<% } %>>>I want to buy</option>
+
 </select>
 
 
