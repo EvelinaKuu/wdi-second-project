@@ -24,25 +24,19 @@
 </ul>
 
 
-<div class="section">
-  <h1 class="title"><%= list.name %></h1>
-  <h2 class="subtitle">By <%= list.createdBy.username %></h2>
-  <% if(locals.isLoggedIn && list.belongsTo === locals.user.id) { %>
-    <form method="POST" action="/lists/<%= list.id %>">
-      <input type="hidden" name="_method" value="DELETE">
-      <button class="button is-small">Delete list</button>
-    </form>
-  <% } %>
+
+  <div class="section">
+    <h1 class="title">All lists</h1>
 
 
-<div class="section">
-  <h1 class="title">New list</h1>
-  <div class="columns">
-    <div class="column is-one-quarter">
-      <form method="POST" action="/lists">
-        <div class="form-group">
-        <select class="name" id="name"  name="name" required>
-  <option selected>Name your list</option>
-  <option value="1">I already have</option>
-  <option value="2">I want to buy</option>
-</select>
+    <ul>
+      <% lists.forEach(list => { %>
+          <% if(locals.isLoggedIn && list.belongsTo === locals.user.id) { %>
+        <li>
+          <h3 class="title is-4"><a href="/lists/<%= list.id %>"><%= list.name %></a></h3>
+          <p class="subtitle is-6">By <%= list.createdBy.username %></p>
+          <br>
+        </li>
+      <% }}) %>
+    </ul>
+  </div>
