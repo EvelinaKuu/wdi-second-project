@@ -12,10 +12,15 @@
 
 
 
-      <% if(locals.isLoggedIn && list.belongsTo === locals.user.id) { %>
-        <form method="POST" action="/lists/<%= list.id %>/items">
 
-                  <%# <select name="select1" id="select1">
+
+      <% if(locals.isLoggedIn && list.belongsTo === locals.user.id) { %>
+        <ul id="products">
+        </ul>
+
+        <form method="POST" id= <%= list.id %> action="/lists/<%= list.id %>/items">
+
+                  <%# <select name="category" id="category">
                     <option value="instructions">- Please select a category -</option>
                     <option value="1">Eyes</option>
                     <option value="2">Skin</option>
@@ -25,7 +30,7 @@
                   </select>
 
 
-                  <select name="select2" id="select2">
+                  <select name="product" id="product">
                     <option value="instructions">- Please select a product -</option>
                     <option value="1">Mascara</option>
                     <option value="1">Eyeliner</option>
@@ -48,7 +53,7 @@
                     <option value="5">Makeupremover</option>
                     <option value="5">Moisturiser</option>
                   </select>
-
+          <input type="submit" value='Add to list'>
 
          %>
           <button class="button is-info">Add item</button>

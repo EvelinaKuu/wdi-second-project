@@ -43,7 +43,7 @@ function editRoute(req, res, next) {
     .exec()
     .then(list => {
       if(!list) return res.redirect();
-      if(!list.belongsTo(req.user)) return res.unauthorized('You do not have permission to edit that resource');
+      // if(!list.createdBy.id === req.user.id) return res.unauthorized('You do not have permission to edit that resource');
       return res.render('lists/edit', { list });
     })
     .catch(next);

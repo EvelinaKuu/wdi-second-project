@@ -28,25 +28,13 @@
 
       </ul>
     </div>
+    <% lists.forEach(list => { %>
+        <% if(locals.isLoggedIn && list.createdBy.id === locals.user.id) { %>
     <div class="col">
-          <a href='/lists/:id/'>Things I want to get</a>
+          <a href="/lists/<%= list.id %>/edit">Things I want to get</a>
     </div>
     <div class="col">
-      <a href='/lists/:id'>Things I already have</a>
-
-    </div>
-  </div>
-
-</div>
-
-    <ul>
-      <% lists.forEach(list => { %>
-          <% if(locals.isLoggedIn && list.belongsTo === locals.user.id) { %>
-        <li>
-          <h3 class="title is-4"><a href="/lists/<%= list.id %>"><%= list.name %></a></h3>
-          <p class="subtitle is-6">By <%= list.createdBy.username %></p>
-          <br>
-        </li>
+      <a href="/lists/<%= list.id %>/edit">Things I already have</a>
       <% }}) %>
-    </ul>
+    </div>
   </div>
