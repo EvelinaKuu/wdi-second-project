@@ -8,7 +8,14 @@
     <% include ./partials/_jumbotron.ejs %>
   </head>
   <body>
+      <div class="container">
     <% include ./partials/_navbar %>
     <%- body %>
+    <% for(const type in messages) { %>
+      <br>
+      <div class="notification is-<%= type %>">
+        <p><%= messages[type] %></p>
+      </div>
+    <% } %>
   </body>
 </html>
