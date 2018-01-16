@@ -33,7 +33,8 @@ router.route('/lists/:id/items/:itemId')
 
 router.route('/register')
   .get(registrations.new)
-  .post(registrations.create);
+  .post(registrations.create)
+  .post(lists.create);
 
 router.route('/login')
   .get(sessions.new)

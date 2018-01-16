@@ -31,10 +31,10 @@
     <div class="column is-one-quarter">
       <form method="POST" action="/lists">
         <div class="form-group">
-        <select class="name" id="name" for="list" required>
+        <select class="name" name="name" for="list" required>
   <option disabled="disabled" selected="selected">Choose a list to create</option>
-  <option  <% if(list.name === 'I already have') { %>selected<% } %>>>I already have</option>
-  <option  <% if(list.name === 'I want to buy') { %>selected<% } %>>>I want to buy</option>
+  <option>I already have</option>
+  <option>I want to buy</option>
 
 </select>
 

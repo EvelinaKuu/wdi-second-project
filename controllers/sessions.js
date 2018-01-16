@@ -16,7 +16,7 @@ function sessionsCreate(req, res, next) {
       req.session.userId = user.id;
 
       req.flash('success', `Welcome back, ${user.username}!`);
-      res.redirect('/');
+      res.redirect('/lists');
     })
     .catch(next);
 }

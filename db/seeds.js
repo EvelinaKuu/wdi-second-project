@@ -25,7 +25,10 @@ User
       .create([{
         name: 'Things I need to get',
         createdBy: users[0],
-        products: 'mascara'
+        products: [{
+          name: 'mascara',
+          category: 'eyes'
+        }]
 
       }]);
   })
