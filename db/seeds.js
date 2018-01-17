@@ -13,10 +13,10 @@ List.collection.drop();
 
 User
   .create([{
-    username: 'p',
-    email: 'p@p',
-    password: 'p',
-    passwordConfirmation: 'p'
+    username: 'ellen97',
+    email: 'ellen97@ga.co',
+    password: 'ellenk',
+    passwordConfirmation: 'ellenk'
   }])
   .then((users) => {
     console.log(`${users.length} users created`);
