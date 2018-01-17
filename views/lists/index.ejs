@@ -1,5 +1,6 @@
-<h1>  <%= user.username %>'s lists</h1>
+<h1 class="usersListHeader">  <%= user.username %>'s lists</h1>
 
+<h3>Start by choosing </h3>
 <% lists.forEach((list) => { %>
   <div>
     <a href="/lists/<%= list.id %>">

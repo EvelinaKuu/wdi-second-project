@@ -46,31 +46,19 @@
     height:100%,auto;
     margin: 0 auto;
     text-align: right;
-
-
-
-    .makeupStarterkit{
-
-    }
-
   }
 
+  a {
+    font-family: 'Roboto', sans-serif;
+        color: white;
+        font-size: 15px;
+        text-decoration: none;
+  }
 }
-
-
-
-.indexFont{
-  font-family: 'Roboto', sans-serif;
-      color: white;
-      font-size: 15px;
-
-}
-
 
 
 body {
   font-family: 'Roboto', sans-serif;
-
 }
 
 .jumbotron {
@@ -83,7 +71,15 @@ body {
 
 }
 
-nav   {
-  color: $primary-color;
+nav {
+
+  & a {
+    text-decoration: none;
+    color: black;
+  }
+  & a:hover {
+    text-decoration: none;
+    color: $primary-color;
+  }
 }
 //
