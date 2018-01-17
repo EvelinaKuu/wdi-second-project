@@ -1,5 +1,9 @@
 // import scss partials here
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,600');
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display|Rock+Salt');
+
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker');
+
 
 body {
   font-family: 'Helvetica', sans-serif;
@@ -10,7 +14,10 @@ body {
   background-position: center;
   background-size: cover;
   color: #FB0D18;
-  font-family: 'Montserrat', sans-serif;
+  // font-family: 'Permanent Marker', cursive;
+// font-family: 'Playfair Display', serif;
+font-family: 'Rock Salt', cursive;
+
 }
 
 .overlay{
@@ -25,7 +32,15 @@ body {
     font-family: 'Montserrat', sans-serif;
     color: #FB0D18;
 }
+.makeupStarterkit{
+  font-family: 'Permanent Marker', cursive;
+// font-family: 'Playfair Display', serif;
+  // font-family: 'Rock Salt', cursive;
+  color: #FB0D18;
+}
+
 
 .indexFont{
       color: #FB0D18;
 }
+//
