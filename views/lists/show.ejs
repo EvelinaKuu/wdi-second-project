@@ -39,7 +39,7 @@
           <%= product.name %>
           <form method="POST" action="/lists/<%= list.id %>/products/<%= product.id %>">
           <input type="hidden" name="_method" value="DELETE">
-        <button type="button" class="btn btn-light">&#x2715;</button>
+        <button class="btn btn-light">&#x2715;</button>
           </form>
         </li>
     <% }) %>
@@ -52,36 +52,36 @@
       <form method="POST" id="<%= list.id %>" action="/lists/<%= list.id %>/products">
 
         <select class="form-control" name="category" id="category">
-          <option value="instructions"> Categories </option>
-          <option value="1">Eyes</option>
-          <option value="2">Skin</option>
-          <option value="3">Lips</option>
-          <option value="4">Brushes and tools</option>
-          <option value="5">Skincare</option>
+          <option value="instructions" selected="true" disabled="disabled"> Categories </option>
+          <option class="one" value="eyes">Eyes</option>
+          <option class="two" value="skin">Skin</option>
+          <option class="three" value="lips">Lips</option>
+          <option class="four" value="brushesAndTools">Brushes and tools</option>
+          <option class="five" value="skincare">Skincare</option>
         </select>
 
-        <select class="form-control "name="name" id="name">
-          <option value="instructions"> Products </option>
-          <option value="Mascara">Mascara</option>
-          <option value="Eyeliner">Eyeliner</option>
-          <option value="Eyebrow pomade">Eyebrow pomade</option>
-          <option value="Eyeshadow palett">Eyeshadow palette</option>
-          <option value="Primer">Primer</option>
-          <option value="Foundation">Foundation</option>
-          <option value="Concealer">Concealer</option>
-          <option value="Blush">Blush</option>
-          <option value="Highlighter">Highlighter</option>
-          <option value="Nude lipstick">Nude lipstick</option>
-          <option value="Red lipstick">Red lipstick</option>
-          <option value="Powder brush">Powder brush</option>
-          <option value="Eyelash curler">Eyelash curler</option>
-          <option value="Eyeshadow brush">Eyeshadow brush</option>
-          <option value="Blush brush">Blush brush</option>
-          <option value="Q-tips">Q-tips</option>
-          <option value="Tweezers">Tweezers</option>
-          <option value="Makeup wipes">Makeup wipes</option>
-          <option value="Makeupremover">Makeupremover</option>
-          <option value="Moisturiser">Moisturiser</option>
+        <select class="form-control" name="name" id="name">
+          <option value="instructions" selected="true" disabled="disabled"> Products </option>
+          <option class="eyes" value="Mascara">Mascara</option>
+          <option class="eyes" value="Eyeliner">Eyeliner</option>
+          <option class="eyes" value="Eyebrow pomade">Eyebrow pomade</option>
+          <option class="eyes" value="Eyeshadow palett">Eyeshadow palette</option>
+          <option class="skin" value="Primer">Primer</option>
+          <option class="skin" value="Foundation">Foundation</option>
+          <option class="skin" value="Concealer">Concealer</option>
+          <option class="skin" value="Blush">Blush</option>
+          <option class="skin" value="Highlighter">Highlighter</option>
+          <option class="lips" value="Nude lipstick">Nude lipstick</option>
+          <option class="lips" value="Red lipstick">Red lipstick</option>
+          <option class="brushesAndTools" value="Powder brush">Powder brush</option>
+          <option class="brushesAndTools" value="Eyelash curler">Eyelash curler</option>
+          <option class="brushesAndTools" value="Eyeshadow brush">Eyeshadow brush</option>
+          <option class="brushesAndTools" value="Blush brush">Blush brush</option>
+          <option class="brushesAndTools" value="Q-tips">Q-tips</option>
+          <option class="brushesAndTools" value="Tweezers">Tweezers</option>
+          <option class="skincare" value="Makeup wipes">Makeup wipes</option>
+          <option class="skincare" value="Makeupremover">Makeupremover</option>
+          <option class="skincare" value="Moisturiser">Moisturiser</option>
         </select>
 
         <input type="submit" value='Add to list' type="button" class="btn btn-light">

@@ -1,46 +1,72 @@
 // import scss partials here
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600');
-@import url('https://fonts.googleapis.com/css?family=Playfair+Display|Rock+Salt');
+@import "variables";
 
 @import url('https://fonts.googleapis.com/css?family=Permanent+Marker');
+@import url('https://fonts.googleapis.com/css?family=Roboto');
 
+// div {
+//   &.something {
+//     text-align: center;
+//   }
+// }
 
-body {
-  font-family: 'Helvetica', sans-serif;
-}
+// .test1 {
+//   background-color: pink;
+//   &.something {
+//     color: tomato;
+//   }
+//
+//   .something {
+//     color: tomato;
+//   }
+// }
 
-.jumbotron {
-  background-color: #87DAFB;
-  background-position: center;
-  background-size: cover;
+.overlay {
+  opacity: 1;
+  background-color: $primary-color;
+  position:fixed;
+  width:100%;
+  height:100%;
+  top:0px;
+  left:0px;
+  z-index:1000;
+  font-family: 'Roboto', sans-serif;
   color: #FB0D18;
-  // font-family: 'Permanent Marker', cursive;
-// font-family: 'Playfair Display', serif;
-font-family: 'Rock Salt', cursive;
 
-}
-
-.overlay{
-    opacity: 1;
-    background-color: #87DAFB;
-    position:fixed;
-    width:100%;
-    height:100%;
-    top:0px;
-    left:0px;
-    z-index:1000;
-    font-family: 'Montserrat', sans-serif;
+  .makeupStarterkit{
+    font-family: 'Permanent Marker', cursive;
+    font-size: 33;
     color: #FB0D18;
+    width: 100%,auto;
+    margin: 0 auto;
+  }
 }
-.makeupStarterkit{
-  font-family: 'Permanent Marker', cursive;
-// font-family: 'Playfair Display', serif;
-  // font-family: 'Rock Salt', cursive;
-  color: #FB0D18;
-}
+
 
 
 .indexFont{
+  font-family: 'Roboto', sans-serif;
       color: #FB0D18;
+
+}
+
+
+
+body {
+  font-family: 'Roboto', sans-serif;
+
+}
+
+.jumbotron {
+  background-color: $primary-color;
+  background-position: center;
+  background-size: cover;
+  color: #FB0D18;
+  font-family: 'Permanent Marker', cursive;
+
+}
+
+nav   {
+  color: $primary-color;
 }
 //

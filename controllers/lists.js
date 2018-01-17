@@ -68,18 +68,6 @@ function updateRoute(req, res, next) {
     });
 }
 
-function deleteRoute(req, res, next) {
-  List
-    .findById(req.params.id)
-    .exec()
-    .then(list => {
-      if(!list) return res.notFound();
-      return list.remove();
-    })
-    .then(() => res.redirect('/lists'))
-    .catch(next);
-}
-
 function createProductRoute(req, res, next) {
   List
     .findById(req.params.id)
@@ -120,7 +108,6 @@ module.exports = {
   show: showRoute,
   edit: editRoute,
   update: updateRoute,
-  delete: deleteRoute,
   createProduct: createProductRoute,
   deleteProduct: deleteProductRoute
 };
