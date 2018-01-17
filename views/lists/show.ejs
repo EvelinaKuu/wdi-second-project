@@ -1,12 +1,12 @@
 <h1>List Show</h1>
 
-<%= list %>
+
 
 <div class="container">
   <div class="row">
     <div class="col-4">
       <h2>Must have list</h2>
-      <ul class="Must-hav's">
+      <ul class="list-group" id="musthavs">
         <li class="list-group-item">Moisturiser</li>
         <li class="list-group-item">Primer</li>
         <li class="list-group-item">Concealer</li>
@@ -36,17 +36,24 @@
       <% list.products.forEach((product) => { %>
         <li>
           <h2><%= product.name %></h2>
-    
-<% } %>
-<% }) %>
+          <form method="POST" action="/lists/<%= list.id %>/products/<%= product.id %>">
+          <input type="hidden" name="_method" value="DELETE">
+          <button>Delete</button>
+          <span class="badge badge-danger">Delete</span>
+          </form>
         </li>
-      <% }) %>
-    </ul>
-    </div>
+<% }) %>
+</ul>
+  </div>
+
+
     <div class="col-4">
       <h2>Add a product to this list</h2>
       <form method="POST" id="<%= list.id %>" action="/lists/<%= list.id %>/products">
-        <select name="category" id="category">
+
+
+
+        <select class="form-control" name="category" id="category">
           <option value="instructions">- Please select a category -</option>
           <option value="1">Eyes</option>
           <option value="2">Skin</option>
@@ -55,7 +62,7 @@
           <option value="5">Skincare</option>
         </select>
 
-        <select name="name" id="name">
+        <select class="form-control "name="name" id="name">
           <option value="instructions">- Please select a product -</option>
           <option value="Mascara">Mascara</option>
           <option value="Eyeliner">Eyeliner</option>
@@ -66,7 +73,7 @@
           <option value="Concealer">Concealer</option>
           <option value="Blush">Blush</option>
           <option value="Highlighter">Highlighter</option>
-          <option value="Nude lipstick"></option>
+          <option value="Nude lipstick">Nude lipstick</option>
           <option value="Red lipstick">Red lipstick</option>
           <option value="Powder brush">Powder brush</option>
           <option value="Eyelash curler">Eyelash curler</option>
@@ -80,6 +87,7 @@
         </select>
 
         <input type="submit" value='Add to list'>
+
       </form>
     </div>
   </div>
