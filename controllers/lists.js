@@ -89,7 +89,7 @@ function createProductRoute(req, res, next) {
 
       if (!list) return res.notFound();
       list.products.push(req.body);
-      
+
       return list.save();
     })
     .then(() => res.redirect(`/lists/${req.params.id}`))
@@ -105,7 +105,7 @@ function deleteProductRoute(req, res, next) {
     .exec()
     .then(list => {
       if (!list) return res.notFound();
-      list.items.id(req.params.itemId).remove();
+      list.products.id(req.params.productId).remove();
 
       return list.save();
     })

@@ -32,14 +32,13 @@
     </div>
     <div class="col-4">
       <h2>All Products</h2>
-      <ul>
+      <ul class="list-group">
       <% list.products.forEach((product) => { %>
-        <li>
-          <h2><%= product.name %></h2>
+        <li class="list-group-item">
+          <%= product.name %>
           <form method="POST" action="/lists/<%= list.id %>/products/<%= product.id %>">
           <input type="hidden" name="_method" value="DELETE">
-          <button>Delete</button>
-          <span class="badge badge-danger">Delete</span>
+        <button>&#x2715;</button>
           </form>
         </li>
 <% }) %>
