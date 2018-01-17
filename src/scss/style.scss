@@ -34,21 +34,34 @@
   color: #FB0D18;
   text-align: center;
   font-size: 15px;
+  display:flex;
+  align-items: center;
+  // justify-content: center;
 
-  .makeupStarterkit{
+  h1{
     font-family: 'Permanent Marker', cursive;
-    font-size: 33px;
+    font-size: 150px;
     color: #FB0D18;
     width: 100%,auto;
+    height:100%,auto;
     margin: 0 auto;
+    text-align: right;
+
+
+
+    .makeupStarterkit{
+
+    }
+
   }
+
 }
 
 
 
 .indexFont{
   font-family: 'Roboto', sans-serif;
-      color: #FB0D18;
+      color: white;
       font-size: 15px;
 
 }
@@ -66,6 +79,7 @@ body {
   background-size: cover;
   color: #FB0D18;
   font-family: 'Permanent Marker', cursive;
+  font-size: 50px;
 
 }
 
