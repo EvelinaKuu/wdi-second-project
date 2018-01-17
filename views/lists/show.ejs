@@ -31,6 +31,7 @@
       </ul>
     </div>
     <div class="col-4">
+
       <h2>All Products</h2>
       <ul class="list-group">
       <% list.products.forEach((product) => { %>
@@ -41,19 +42,17 @@
         <button>&#x2715;</button>
           </form>
         </li>
-<% }) %>
-</ul>
-  </div>
+    <% }) %>
+    </ul>
+</div>
 
 
     <div class="col-4">
-      <h2>Add a product to this list</h2>
+      <h4>Add a product to the list by first choosing the category and then the product</h4>
       <form method="POST" id="<%= list.id %>" action="/lists/<%= list.id %>/products">
 
-
-
         <select class="form-control" name="category" id="category">
-          <option value="instructions">- Please select a category -</option>
+          <option value="instructions"> Categories </option>
           <option value="1">Eyes</option>
           <option value="2">Skin</option>
           <option value="3">Lips</option>
@@ -62,7 +61,7 @@
         </select>
 
         <select class="form-control "name="name" id="name">
-          <option value="instructions">- Please select a product -</option>
+          <option value="instructions"> Products </option>
           <option value="Mascara">Mascara</option>
           <option value="Eyeliner">Eyeliner</option>
           <option value="Eyebrow pomade">Eyebrow pomade</option>
@@ -88,7 +87,9 @@
         <input type="submit" value='Add to list'>
 
       </form>
+
     </div>
+
   </div>
 
 </div>

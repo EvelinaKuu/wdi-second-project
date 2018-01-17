@@ -29,8 +29,9 @@ router.route('/lists/:id/products')
   .post(secureRoute, lists.createProduct);
 
 router.route('/lists/:id/products/:productId')
-  .delete(secureRoute, lists.deleteProduct);
+  .delete(lists.deleteProduct);
 
+// I removed secureRoute, from above ()
 router.route('/register')
   .get(registrations.new)
   .post(registrations.create)
