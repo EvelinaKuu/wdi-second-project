@@ -1,40 +1,9 @@
-<h3>This is a good starter list for your makeup kit. Have a look and then make you own list of makeup's and tool's youl already have and one for the one's you want to get. </h3>
+<h1>My lists</h1>
 
-<div class="container">
-  <div class="row">
-    <div class="col-4">
-      <ul class="Must-hav's">
-        <li class="list-group-item">Moisturiser</li>
-        <li class="list-group-item">Primer</li>
-        <li class="list-group-item">Concealer</li>
-        <li class="list-group-item">Foundation</li>
-        <li class="list-group-item">Eyebrow pomade</li>
-        <li class="list-group-item">Eyeliner</li>
-        <li class="list-group-item">Mascara</li>
-        <li class="list-group-item">Nude lipstick</li>
-        <li class="list-group-item">Red lipstick</li>
-        <li class="list-group-item">Blush</li>
-        <li class="list-group-item">Highlighter</li>
-        <li class="list-group-item">Eyeshadow palette</li>
-        <li class="list-group-item">Q-tips</li>
-        <li class="list-group-item">Make-up wipes</li>
-        <li class="list-group-item">Tweezers</li>
-        <li class="list-group-item">Eyelash curler</li>
-        <li class="list-group-item">Spoolie brush</li>
-        <li class="list-group-item">Powder brush</li>
-        <li class="list-group-item">Blush brush</li>
-        <li class="list-group-item">Eyeshadow brush</li>
-        <li class="list-group-item">Crease brush</li>
-
-      </ul>
-    </div>
-    <% lists.forEach(list => { %>
-        <% if(locals.isLoggedIn && list.createdBy.id === locals.user.id) { %>
-    <div class="col">
-          <a href="/lists/<%= list.id %>/edit">Things I want to get</a>
-    </div>
-    <div class="col">
-      <a href="/lists/<%= list.id %>/edit">Things I already have</a>
-      <% }}) %>
-    </div>
+<% lists.forEach((list) => { %>
+  <div>
+    <a href="/lists/<%= list.id %>">
+      <h2><%= list.name %></h2>
+    </a>
   </div>
+<% }) %>

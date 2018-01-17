@@ -1,61 +1,87 @@
+<h1>List Show</h1>
 
-<div class="section">
-  <h1 class="title"><%= list.title %></h1>
-  <h2 class="subtitle">By <%= list.createdBy.username %></h2>
-  <% if(locals.isLoggedIn && list.belongsTo === locals.user.id) { %>
-    <form method="POST" action="/lists/<%= list.id %>">
-      <input type="hidden" name="_method" value="DELETE">
-      <button class="button is-small">Delete list</button>
-    </form>
-  <% } %>
-  <br>
+<%= list %>
 
+<div class="container">
+  <div class="row">
+    <div class="col-4">
+      <h2>Must have list</h2>
+      <ul class="Must-hav's">
+        <li class="list-group-item">Moisturiser</li>
+        <li class="list-group-item">Primer</li>
+        <li class="list-group-item">Concealer</li>
+        <li class="list-group-item">Foundation</li>
+        <li class="list-group-item">Eyebrow pomade</li>
+        <li class="list-group-item">Eyeliner</li>
+        <li class="list-group-item">Mascara</li>
+        <li class="list-group-item">Nude lipstick</li>
+        <li class="list-group-item">Red lipstick</li>
+        <li class="list-group-item">Blush</li>
+        <li class="list-group-item">Highlighter</li>
+        <li class="list-group-item">Eyeshadow palette</li>
+        <li class="list-group-item">Q-tips</li>
+        <li class="list-group-item">Make-up wipes</li>
+        <li class="list-group-item">Tweezers</li>
+        <li class="list-group-item">Eyelash curler</li>
+        <li class="list-group-item">Spoolie brush</li>
+        <li class="list-group-item">Powder brush</li>
+        <li class="list-group-item">Blush brush</li>
+        <li class="list-group-item">Eyeshadow brush</li>
+        <li class="list-group-item">Crease brush</li>
+      </ul>
+    </div>
+    <div class="col-4">
+      <h2>All Products</h2>
+      <ul>
+      <% list.products.forEach((product) => { %>
+        <li>
+          <h2><%= product.name %></h2>
+    
+<% } %>
+<% }) %>
+        </li>
+      <% }) %>
+    </ul>
+    </div>
+    <div class="col-4">
+      <h2>Add a product to this list</h2>
+      <form method="POST" id="<%= list.id %>" action="/lists/<%= list.id %>/products">
+        <select name="category" id="category">
+          <option value="instructions">- Please select a category -</option>
+          <option value="1">Eyes</option>
+          <option value="2">Skin</option>
+          <option value="3">Lips</option>
+          <option value="4">Brushes and tools</option>
+          <option value="5">Skincare</option>
+        </select>
 
+        <select name="name" id="name">
+          <option value="instructions">- Please select a product -</option>
+          <option value="Mascara">Mascara</option>
+          <option value="Eyeliner">Eyeliner</option>
+          <option value="Eyebrow pomade">Eyebrow pomade</option>
+          <option value="Eyeshadow palett">Eyeshadow palette</option>
+          <option value="Primer">Primer</option>
+          <option value="Foundation">Foundation</option>
+          <option value="Concealer">Concealer</option>
+          <option value="Blush">Blush</option>
+          <option value="Highlighter">Highlighter</option>
+          <option value="Nude lipstick"></option>
+          <option value="Red lipstick">Red lipstick</option>
+          <option value="Powder brush">Powder brush</option>
+          <option value="Eyelash curler">Eyelash curler</option>
+          <option value="Eyeshadow brush">Eyeshadow brush</option>
+          <option value="Blush brush">Blush brush</option>
+          <option value="Q-tips">Q-tips</option>
+          <option value="Tweezers">Tweezers</option>
+          <option value="Makeup wipes">Makeup wipes</option>
+          <option value="Makeupremover">Makeupremover</option>
+          <option value="Moisturiser">Moisturiser</option>
+        </select>
 
+        <input type="submit" value='Add to list'>
+      </form>
+    </div>
+  </div>
 
-
-      <% if(locals.isLoggedIn && list.belongsTo === locals.user.id) { %>
-        <ul id="products">
-        </ul>
-
-        <form method="POST" id= <%= list.id %> action="/lists/<%= list.id %>/items">
-
-                  <%# <select name="category" id="category">
-                    <option value="instructions">- Please select a category -</option>
-                    <option value="1">Eyes</option>
-                    <option value="2">Skin</option>
-                    <option value="3">Lips</option>
-                    <option value="4">Brushes and tools</option>
-                    <option value="5">Skincare</option>
-                  </select>
-
-
-                  <select name="product" id="product">
-                    <option value="instructions">- Please select a product -</option>
-                    <option value="1">Mascara</option>
-                    <option value="1">Eyeliner</option>
-                    <option value="1">Eyebrow pomade</option>
-                    <option value="1">Eyeshadow palette</option>
-                    <option value="2">Primer</option>
-                    <option value="2">Foundation</option>
-                    <option value="2">Concealer</option>
-                    <option value="2">Blush</option>
-                    <option value="2">Highlighter</option>
-                    <option value="3">Nude lipstick</option>
-                    <option value="3">Red lipstick</option>
-                    <option value="4">Powder brush</option>
-                    <option value="4">Eyelash curler</option>
-                    <option value="4">Eyeshadow brush</option>
-                    <option value="4">Blush brush</option>
-                    <option value="4">Q-tips</option>
-                    <option value="4">Tweezers</option>
-                    <option value="4">Makeup wipes</option>
-                    <option value="5">Makeupremover</option>
-                    <option value="5">Moisturiser</option>
-                  </select>
-          <input type="submit" value='Add to list'>
-
-         %>
-          <button class="button is-info">Add item</button>
-        </form>
-      <% } %>
+</div>

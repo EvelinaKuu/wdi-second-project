@@ -1,8 +1,8 @@
 
 <p>this is where I add the list items</p>
-</div>
+
     <ul>
-      <% lists.forEach(list => { %>
+      <% lists.forEach((list) => { %>
           <% if(locals.isLoggedIn && list.createdBy.id === locals.user.id) { %>
         <li>
           <h3 class="title is-4"><a href="/lists/<%= list.id %>/edit"><%= list.name %></a></h3>
@@ -11,7 +11,6 @@
         </li>
       <% }}) %>
     </ul>
-  </div>
 
   <form method="POST" action="/lists/<%= list.id %>/edit">
   <input type="hidden" name="_method" value="PUT">

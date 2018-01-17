@@ -25,11 +25,11 @@ router.route('/lists/:id')
 router.route('/lists/:id/edit')
   .get(secureRoute, lists.edit);
 
-router.route('/lists/:id/items')
-  .post(secureRoute, lists.createItem);
+router.route('/lists/:id/products')
+  .post(secureRoute, lists.createProduct);
 
-router.route('/lists/:id/items/:itemId')
-  .delete(secureRoute, lists.deleteItem);
+router.route('/lists/:id/products/:productId')
+  .delete(secureRoute, lists.deleteProduct);
 
 router.route('/register')
   .get(registrations.new)

@@ -2,7 +2,7 @@ const List = require('../models/list');
 
 function indexRoute(req, res, next) {
   List
-    .find()
+    .find({ createdBy: req.user.id })
     .populate('createdBy')
     .exec()
     .then((lists) => res.render('lists/index', { lists }))
@@ -28,7 +28,7 @@ function createRoute(req, res, next) {
 function showRoute(req, res, next) {
   List
     .findById(req.params.id)
-    .populate('createdBy items.createdBy')
+    .populate('createdBy')
     .exec()
     .then(list => {
       if(!list) return res.notFound();
@@ -37,16 +37,17 @@ function showRoute(req, res, next) {
     .catch(next);
 }
 
-function editRoute(req, res, next) {
+function editRoute(req,res) {
   List
     .findById(req.params.id)
     .exec()
-    .then(list => {
-      if(!list) return res.redirect();
-      // if(!list.createdBy.id === req.user.id) return res.unauthorized('You do not have permission to edit that resource');
-      return res.render('lists/edit', { list });
+    .then((list) => {
+      if(!list) return res.status(404).end();
+      res.render('lists/edit', {list});
     })
-    .catch(next);
+    .catch((err) =>{
+      res.status(500).render('error', {err});
+    });
 }
 
 function updateRoute(req, res, next) {
@@ -79,16 +80,16 @@ function deleteRoute(req, res, next) {
     .catch(next);
 }
 
-function createItemRoute(req, res, next) {
+function createProductRoute(req, res, next) {
   List
     .findById(req.params.id)
     .exec()
     .then(list => {
+      console.log(list);
+
       if (!list) return res.notFound();
-
-      req.body.createdBy = req.user;
-      list.items.push(req.body);
-
+      list.products.push(req.body);
+      
       return list.save();
     })
     .then(() => res.redirect(`/lists/${req.params.id}`))
@@ -98,7 +99,7 @@ function createItemRoute(req, res, next) {
     });
 }
 
-function deleteItemRoute(req, res, next) {
+function deleteProductRoute(req, res, next) {
   List
     .findById(req.params.id)
     .exec()
@@ -120,6 +121,6 @@ module.exports = {
   edit: editRoute,
   update: updateRoute,
   delete: deleteRoute,
-  createItem: createItemRoute,
-  deleteItem: deleteItemRoute
+  createProduct: createProductRoute,
+  deleteProduct: deleteProductRoute
 };
