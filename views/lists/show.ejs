@@ -39,7 +39,7 @@
           <%= product.name %>
           <form method="POST" action="/lists/<%= list.id %>/products/<%= product.id %>">
           <input type="hidden" name="_method" value="DELETE">
-        <button>&#x2715;</button>
+        <button type="button" class="btn btn-light">&#x2715;</button>
           </form>
         </li>
     <% }) %>
@@ -84,7 +84,7 @@
           <option value="Moisturiser">Moisturiser</option>
         </select>
 
-        <input type="submit" value='Add to list'>
+        <input type="submit" value='Add to list' type="button" class="btn btn-light">
 
       </form>
 
