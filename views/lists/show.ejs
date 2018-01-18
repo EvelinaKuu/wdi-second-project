@@ -1,11 +1,11 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-3">
+    <div class="col-md-3">
       <h2>Great starter kit:</h2>
       <br>
       <div class="row">
-        <div class="col-9">
+        <div class="col-md-9">
           <ul class="list-group" id="musthavs">
             <li class="list-group-item">Moisturiser</li>
             <li class="list-group-item">Primer</li>
@@ -33,17 +33,17 @@
       </div>
     </div>
 
-    <div class="col-4">
+    <div class="col-md-4">
       <h2><%= list.name %></h2>
       <ul class="list-group">
         <br>
             <% list.products.forEach((product) => { %>
               <li class="list-group-item">
               <div class="row">
-              <div class="col-10 productListItem">
+              <div class="col-md-10 productListItem">
                 <%= product.name %>
               </div>
-                <div class="col-2">
+                <div class="col-md-2">
                 <form method="POST" action="/lists/<%= list.id %>/products/<%= product.id %>">
                 <input type="hidden" name="_method" value="DELETE">
                 <button class="btn btn-light">&#x2715;</button>
@@ -55,7 +55,7 @@
       </ul>
     </div>
 
-    <div class="col-4">
+    <div class="col-md-4">
       <h4>Add a product to the list by first choosing the category and then the product</h4>
       <br>
       <form method="POST" id="<%= list.id %>" action="/lists/<%= list.id %>/products">
