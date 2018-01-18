@@ -1,5 +1,12 @@
 // import scss partials here
 @import "variables";
+@import "listIndex";
+@@import "listShow";
+@import "registrations";
+@import "sessions";
+@import "index";
+@import "404";
+@import "500";
 
 @import url('https://fonts.googleapis.com/css?family=Permanent+Marker');
 @import url('https://fonts.googleapis.com/css?family=Roboto');
