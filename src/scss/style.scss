@@ -37,13 +37,20 @@ body {
 nav {
   background-color: $primary-color;
 
-//   ul li:not(:last-child) {
-//     border-right:1px solid grey;
-//     margin-right:20px;
-//     padding-right:20px;
-// }
+  ul li:not(:last-child) {
+    border-right:1px solid white;
+    margin-right:20px;
+    padding-right:20px;
+}
   & a {
+    font: 100% $font-stack;
     color: white;
+    font-size: 17px;
+    text-decoration: none;
+    
+    a:hover {
+      color: white;
+    }
   }
 }
 

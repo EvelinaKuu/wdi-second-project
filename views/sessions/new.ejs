@@ -4,23 +4,31 @@
   </div>
 <% } %>
 
-<div class="section">
+
+<div class="container">
   <h1 class="title">Log in</h1>
+    <form method="POST" action="/login">
+      <div class="row">
+        <div class="col-3 col-centered">
+          <div class="form-group">
+            <label for="exampleEmail">Email</label>
+            <input type="email" class="form-control" required>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-3 col-centered">
+          <div class="form-group">
+            <label for="examplePassword" for="password">Password</label>
+            <input type="password" class="form-control" required>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col col-centered">
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+      </div>
 
-<form method="POST" action="/login">
-  <div class="form-group">
-      <label class="label" for="email">Email</label>
-      <div class="control">
-        <input class="input" type="text" name="email" id="email" required>
-      </div>
-    </div>
-    <div class="field">
-      <label class="label" for="password">Password</label>
-      <div class="control">
-        <input class="input" type="password" name="password" id="password" required>
-      </div>
-    </div>
-    <button class="button is-link">Login</button>
 </form>
-
 </div>
