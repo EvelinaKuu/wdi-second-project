@@ -9,9 +9,7 @@ const secureRoute = require('../lib/secureRoute');
 
 router.get('/', (req, res) => res.render('statics/index'));
 
-router.route('/lists')
-  .get(lists.index)
-  .post(secureRoute, lists.create);
+
 
 router.route('/lists/new')
   .get(secureRoute, lists.new);
