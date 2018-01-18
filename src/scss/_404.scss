@@ -7,35 +7,17 @@
   top:0px;
   left:0px;
   z-index:1000;
-  font-family: 'Roboto', sans-serif;
+  font: 100% $font-stack;
   color: #FB0D18;
-  // text-align: center;
-  // display:flex;
-  // align-items: center;
-  // justify-content: center;
-
-  // h2 {
-  //   font-family: 'Permanent Marker', cursive;
-  //   font-size: 100px;
-  //   color: #FB0D18;
-  //   // width: 100%,auto;
-  //   // height:100%,auto;
-  //   // margin: 0 auto;
-  //   // text-align: right;
-  // }
 
   h3 {
     font-family: 'Permanent Marker', cursive;
     font-size: 70px;
     color: #FB0D18;
-    // width: 100%,auto;
-    // height:100%,auto;
-    // margin: 0 auto;
-    // text-align: right;
   }
 
   p {
-    font-family: 'Roboto', sans-serif;
+  font: 100% $font-stack;
     color:  #FB0D18;
     font-size: 20px;
 

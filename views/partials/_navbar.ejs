@@ -1,19 +1,28 @@
 
-  <nav class="navbar has-shadow" role="navigation" aria-label="main navigation">
-    <div class="container">
-      <div class="navbar-brand">
-        <a href="/" class="navbar-item">Home</a>
-      </div>
-      <div class="navbar-menu is-active">
-        <div class="navbar-end">
+  <nav class="navbar justify-content-end" role="navigation" aria-label="main navigation">
+      <div class="expand navbar-expand">
+        <ul class="navbar-nav">
+
           <% if(locals.isLoggedIn) { %>
-            <a href="/lists" class="navbar-item">Lists</a>
-            <a href="/logout" class="navbar-item">Logout</a>
+            <li class="nav-item">
+              <a href="/lists" class="nav-link">Lists</a>
+            </li>
+
+            <li class="nav-item">
+              <a href="/logout" class="nav-link">Logout</a>
+            </li>
+
           <% } else { %>
-            <a href="/register" class="navbar-item">Register</a>
-            <a href="/login" class="navbar-item">Login</a>
+            <li class="nav-item">
+              <a href="/" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="/register" class="nav-link">Register</a>
+            </li>
+            <li class="nav-item">
+              <a href="/login" class="nav-link">Login</a>
+            </li>
           <% } %>
-        </div>
+        </ul>
       </div>
-    </div>
   </nav>

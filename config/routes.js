@@ -9,7 +9,9 @@ const secureRoute = require('../lib/secureRoute');
 
 router.get('/', (req, res) => res.render('statics/index'));
 
-
+router.route('/lists')
+  .get(lists.index)
+  .post(secureRoute, lists.create);
 
 router.route('/lists/new')
   .get(secureRoute, lists.new);
@@ -31,8 +33,7 @@ router.route('/lists/:id/products/:productId')
 // I removed secureRoute, from above ()
 router.route('/register')
   .get(registrations.new)
-  .post(registrations.create)
-  .post(lists.create);
+  .post(registrations.create);
 
 router.route('/login')
   .get(sessions.new)

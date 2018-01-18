@@ -2,22 +2,22 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Makeup starter kit</title>
     <% include ./partials/_stylesheets.ejs %>
-    <% include ./partials/_scripts.ejs %>
+    <% include ./partials/_navbar.ejs %>
     <% include ./partials/_jumbotron.ejs %>
-  </head>
-  <body>
-      <div class="container">
 
-    <% include ./partials/_navbar %>
+  </head>
+
+  <body>
     <% for(const type in messages) { %>
-      <br>
-      <div class="notification is-<%= type %>">
-        <p><%= messages[type] %></p>
+      <div class="callout <%= type %>">
+        <%= messages[type] %>
       </div>
     <% } %>
     <%- body %>
+    <% include ./partials/_scripts.ejs %>
 
   </body>
 </html>

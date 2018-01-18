@@ -3,38 +3,42 @@
     <%= message %>
   </div>
 <% } %>
-<div class="section">
-  <h1 class="title">Register</h1>
 
-<div class="columns">
-  <div class="column is-one-quarter">
-    <form method="POST" action="/register">
-      <div class="field">
-            <label class="label" for="username">Username</label>
-            <div class="control">
-              <input class="input" type="text" name="username" id="username" required>
-            </div>
-          </div>
-          <div class="field">
-            <label class="label" for="email">Email</label>
-            <div class="control">
-              <input class="input" type="email" name="email" id="email" required>
-            </div>
-          </div>
-          <div class="field">
-            <label class="label" for="password">Password</label>
-            <div class="control">
-              <input class="input" type="password" name="password" id="password" required>
-            </div>
-          </div>
-          <div class="field">
-            <label class="label" for="passwordConfirmation">Password Confirmation</label>
-            <div class="control">
-              <input class="input" type="password" name="passwordConfirmation" id="passwordConfirmation" required>
-            </div>
-          </div>
-          <button class="button is-link">Register</button>
-</form>
-</div>
-</div>
+
+<div class="container">
+  <form method="POST" action="/register">
+    <div class="row">
+      <div class="col">
+        <div class="form-group">
+          <label for="exampleInputUsername">Username</label>
+          <input type="username" class="form-control" id="exampleInputUser" placeholder="Enter username">
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <div class="form-group">
+          <label for="exampleInputEmail1">Email address</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <div class="form-group">
+          <label for="exampleInputPassword1">Password</label>
+          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Enter password">
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <div class="form-group">
+          <label for="exampleInputPasswordControl">Password confirmation</label>
+          <input type="password" class="form-control" id="exampleInputPasswordControl" placeholder="Enter password confirmation">
+        </div>
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
 </div>

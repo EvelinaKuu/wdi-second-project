@@ -32,8 +32,21 @@
 
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font: 100% $font-stack;
 }
+nav {
+  background-color: $primary-color;
+
+//   ul li:not(:last-child) {
+//     border-right:1px solid grey;
+//     margin-right:20px;
+//     padding-right:20px;
+// }
+  & a {
+    color: white;
+  }
+}
+
 
 .jumbotron {
   background-color: $primary-color;
@@ -42,18 +55,4 @@ body {
   color: #FB0D18;
   font-family: 'Permanent Marker', cursive;
   font-size: 50px;
-
 }
-
-nav {
-
-  & a {
-    text-decoration: none;
-    color: black;
-  }
-  & a:hover {
-    text-decoration: none;
-    color: $primary-color;
-  }
-}
-//
