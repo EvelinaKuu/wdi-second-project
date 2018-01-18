@@ -27,21 +27,38 @@
         <li class="list-group-item">Crease brush</li>
       </ul>
     </div>
-    <div class="col-4">
 
+    <div class="col-4">
       <h2><%= list.name %></h2>
       <ul class="list-group">
-      <% list.products.forEach((product) => { %>
-        <li class="list-group-item">
-          <%= product.name %>
-          <form method="POST" action="/lists/<%= list.id %>/products/<%= product.id %>">
-          <input type="hidden" name="_method" value="DELETE">
-        <button class="btn btn-light">&#x2715;</button>
-          </form>
-        </li>
-    <% }) %>
-    </ul>
-</div>
+            <% list.products.forEach((product) => { %>
+              <li class="list-group-item">
+              <div class="row">
+              <div class="col-10">
+                <%= product.name %>
+              </div>
+                <div class="col-2">
+                <form method="POST" action="/lists/<%= list.id %>/products/<%= product.id %>">
+                <input type="hidden" name="_method" value="DELETE">
+                <button class="btn btn-light">&#x2715;</button>
+                </form>
+                </div>
+
+              </div>
+                </li>
+            <% }) %>
+          </ul>
+            </div>
+
+
+
+
+
+
+
+
+
+
 
 
     <div class="col-4">
