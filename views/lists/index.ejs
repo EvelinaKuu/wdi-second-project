@@ -1,14 +1,21 @@
-<h1 class="usersListHeader">  <%= user.username %>'s lists</h1>
-
-<h3>We have a list of items you will want to get if you want to have a good starter kit for doing makeup's. Start by choosing a list where you will add products by the one's you already have or that you want to get.</h3>
-<% lists.forEach((list) => { %>
-    <div class="row">
-        <div class="col-4">
-        <a href="/lists/<%= list.id %>">
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <h1 class="usersListHeader">  <%= user.username %>'s lists</h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <h3>We have a list of items you will want to get if you want to have a good starter kit for doing makeup's. Start by choosing a list where you will add products by the one's you already have or that you want to get.</h3>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-8">
+      <% lists.forEach((list) => { %>
+          <a class="btn btn-outline-default btn-block listName" href="/lists/<%= list.id %>">
           <h2><%= list.name %></h2>
           </a>
-        </div>
-    
-
-
-<% }) %>
+      <% }) %>
+    </div>
+  </div>
+</div>
