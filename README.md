@@ -6,22 +6,14 @@
 <img width="1276" alt="screen shot 2018-01-19 at 10 50 28" src="https://user-images.githubusercontent.com/33250285/35147472-a3201274-fd06-11e7-8103-1fd0794a146b.png">
 
 ###The project idea:
-[My project](https://www.google.com)
+[My project](https://makeupstarterkit.herokuapp.com/)
 is an app to do lists on. The theme is makeup starter kit. The idea is to make anyone new to makeup to do an inventory of products they already have and a wish list of product they might want to get to have everything needed to do makeups.
 
 ###Overview:
 
-Styling: the target group would be teenagers who'd start to use makeup or anyone who instead of shopping cosmetics on an impuls wants to make an inventory of their makeup kit. Although the majority of possible users probably are female I didn't want to make the visual style of the app too girly. My aim would be more ninja-style with a bold colour choice to attract my target group. 
+The app uses authentication to let users create their own content for two lists.
 
-the list of things use
-comment why did this aåå
-what went well, what was the struggle
-what would you add
-fully responsive
-link to heroku site
-most important part
-
-screenshots styling
+Styling: the target group would be teenagers who'd start to use makeup or anyone who instead of shopping cosmetics on an impuls wants to make an inventory of their makeup kit. Although the majority of possible users probably are female I didn't want to make the visual style of the app too girly. My aim would be more ninja-style with a bold colour choice to attract my target group. I'm especially happy to have been able to make it fully responsive.
 
 
 ###Techniques
@@ -63,8 +55,8 @@ screenshots styling
 * Run-sequence 2.2.1,
 
 ###Secondary tools
-Balsamiq
-Trello
+* Balsamiq
+* Trello
 
 ### The process
 I used Balsamiq for doing wireframes and Trello to plan the project and the different tasks. My project to-do list on Trello on day one of the project:
@@ -73,7 +65,8 @@ I used Balsamiq for doing wireframes and Trello to plan the project and the diff
 My project to-do list on Trello on the fourth (4/5) day.
 <img width="1275" alt="screen shot 2018-01-15 at 09 40 58" src="https://user-images.githubusercontent.com/33250285/35146668-9a8593da-fd03-11e7-80ca-9ef9282cabfc.png">
 
-Here is my original wireframes made using Balsamiq. The final app looks different. I changed the static index page, removed the create list function and restricted the editing of the lists to one list at a time. 
+Here is my original wireframes made using Balsamiq. The final app looks different. I changed the static index page, removed the create list function and restricted the editing of the lists to one list at a time. I made the process to create lists and add items much more complicated than it had to be. I think I learned alot about the planning and adjusting plans during the process. 
+
 <img width="762" alt="screen shot 2018-01-13 at 14 43 02" src="https://user-images.githubusercontent.com/33250285/35146686-a8c40abc-fd03-11e7-9f90-9563128598d3.png">
 
 ###I would implement given some more time:
