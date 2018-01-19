@@ -11,9 +11,13 @@ is an app to do lists on. The theme is makeup starter kit. The idea is to make a
 
 ###Overview:
 
-The app uses authentication to let users create their own content for two lists.
+My Express application uses hashed passwords and an authentication to let users create their own content for two lists ("Thing I want to get" and "Things I already have"). I use two models (user and list with an embedded relationship) and ReSTful routes. For CSS I use SCSS and Bootstrap. 
+
+<img width="1273" alt="screen shot 2018-01-19 at 12 11 45" src="https://user-images.githubusercontent.com/33250285/35150433-46f5a732-fd12-11e7-9e79-e37d115ba0b3.png">
 
 Styling: the target group would be teenagers who'd start to use makeup or anyone who instead of shopping cosmetics on an impuls wants to make an inventory of their makeup kit. Although the majority of possible users probably are female I didn't want to make the visual style of the app too girly. My aim would be more ninja-style with a bold colour choice to attract my target group. I'm especially happy to have been able to make it fully responsive.
+<img width="1272" alt="screen shot 2018-01-19 at 12 13 38" src="https://user-images.githubusercontent.com/33250285/35150461-5a6f6c80-fd12-11e7-9604-cd4cabab5864.png">
+
 
 
 ###Techniques
