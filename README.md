@@ -16,13 +16,15 @@ My Express application uses hashed passwords and an authentication to let users 
 <img width="1273" alt="screen shot 2018-01-19 at 12 11 45" src="https://user-images.githubusercontent.com/33250285/35150433-46f5a732-fd12-11e7-9e79-e37d115ba0b3.png">
 
 Styling: the target group would be teenagers who'd start to use makeup or anyone who instead of shopping cosmetics on an impuls wants to make an inventory of their makeup kit. Although the majority of possible users probably are female I didn't want to make the visual style of the app too girly. My aim would be more ninja-style with a bold colour choice to attract my target group. I'm especially happy to have been able to make it fully responsive.
+
 <img width="1272" alt="screen shot 2018-01-19 at 12 13 38" src="https://user-images.githubusercontent.com/33250285/35150461-5a6f6c80-fd12-11e7-9604-cd4cabab5864.png">
 
+<img width="354" alt="screen shot 2018-01-19 at 12 35 29" src="https://user-images.githubusercontent.com/33250285/35151195-57840a00-fd15-11e7-8d8b-87861ee90da9.png">
 
 
 ###Techniques
-* Express 4.14.1
-* Node.js 9.2.0
+* Express
+* Node.js
 * JavaScript ES6
 * jQuery
 * HTML5
@@ -30,33 +32,23 @@ Styling: the target group would be teenagers who'd start to use makeup or anyone
 * SCSS
 * Bootstrap
 * MongoDB
+* Gulp
+* Git
+* Heroku
 
 
 ###Dependencies used
-* Bcrypt 1.0.3
-* Bluebird 3.4.7
-* Body-parser 1.18.2
-* Ejs 2.5.6
-* Express-ejs-layouts 2.2.0
-* Express-flash 0.0.2
-* Express-session 1.15.6
-* Method-override 2.3.10
-* Mongoose 5.0.0-rc2
-* Morgan 1.8.1
-* Babel-core 6.26.0,
-* Babel-preset-env 1.6.1,
-* Browser-sync: 2.23.5,
-* Gulp 3.9.1,
-* Gulp-babel 7.0.0,
-* Gulp-clean 0.4.0,
-* Gulp-clean-css 3.9.2,
-* Gulp-nodemon 2.2.1,
-* Gulp-notify 3.1.0,
-* Gulp-plumber 1.2.0,
-* Gulp-sass 3.1.0,
-* Gulp-sourcemaps 2.6.3,
-* Gulp-uglify 3.0.0,
-* Run-sequence 2.2.1,
+* Bcrypt
+* Bluebird
+* Body-parser
+* Ejs 
+* Express-ejs-layouts
+* Express-flash
+* Express-session
+* Method-override
+* Mongoose
+* Morgan
+
 
 ###Secondary tools
 * Balsamiq
@@ -77,3 +69,7 @@ Here is my original wireframes made using Balsamiq. The final app looks differen
 I would use an API to search for products and prices and add a link to take you to a online store to purchase the product you don't have yet.
 
 I would also use more time on the styling over all but specifically the lists index view and the flash messages, would also add icons to the two lists.
+
+###Links 
+* Project on [Github](https://github.com/EvelinaKuu/wdi-second-project).
+* Project deployed with [Heroku](https://makeupstarterkit.herokuapp.com/).
