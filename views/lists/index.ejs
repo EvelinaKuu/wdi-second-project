@@ -13,8 +13,9 @@
 
       <% lists.forEach((list) => { %>
           <div class="col">
-          <i class="fas fa-bars"></i>
+
           <a class="btn btn-outline-default btn-block listName" href="/lists/<%= list.id %>">
+          <i class="fas fa-bars"></i>
           <h2><%= list.name %></h2>
           </a>
           </div>
