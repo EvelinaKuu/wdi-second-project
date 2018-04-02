@@ -12,10 +12,12 @@
   <div class="row">
 
       <% lists.forEach((list) => { %>
+          <div class="col">
           <a class="btn btn-outline-default btn-block listName" href="/lists/<%= list.id %>">
           <h2><%= list.name %></h2>
           </a>
+          </div>
       <% }) %>
-  
+
   </div>
 </div>
