@@ -35,7 +35,9 @@ Styling: the target group would be teenagers who'd start to use makeup or anyone
 Making the list:
 <img width="1272" alt="screen shot 2018-01-19 at 12 13 38" src="https://user-images.githubusercontent.com/33250285/35150461-5a6f6c80-fd12-11e7-9604-cd4cabab5864.png">
 
-Responsive view of the landing page:
+
+The app on a phone:
+
 <img width="354" alt="screen shot 2018-01-19 at 12 35 29" src="https://user-images.githubusercontent.com/33250285/35151195-57840a00-fd15-11e7-8d8b-87861ee90da9.png">
 
 
