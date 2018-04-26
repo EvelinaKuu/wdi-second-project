@@ -1,14 +1,8 @@
-h1 {
-  & .usersListHeader{
-    }
-    }
-
-
 a {
   &.listName {
     font: 100% $font-stack;
     color: $primary-color;
     font-size: 17px;
     text-decoration: none;
-}
+  }
 }

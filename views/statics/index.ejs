@@ -2,18 +2,14 @@
   <nav class="navbar justify-content-end" role="navigation" aria-label="main navigation">
       <div class="expand navbar-expand">
         <ul class="navbar-nav">
-
           <% if(locals.isLoggedIn) { %>
             <li class="nav-item">
               <a href="/lists" class="nav-link">Lists</a>
             </li>
-
             <li class="nav-item">
               <a href="/logout" class="nav-link">Logout</a>
             </li>
-
           <% } else { %>
-
             <li class="nav-item">
               <a href="/register" class="nav-link">Register</a>
             </li>

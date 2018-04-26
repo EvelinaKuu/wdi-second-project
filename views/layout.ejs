@@ -2,14 +2,12 @@
 <html>
   <head>
     <meta charset="utf-8">
-
     <title>Makeup starter kit</title>
     <% include ./partials/_stylesheets.ejs %>
     <% include ./partials/_navbar.ejs %>
     <% include ./partials/_jumbotron.ejs %>
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
-
   <body>
     <% for(const type in messages) { %>
       <div class="callout <%= type %>">
@@ -18,6 +16,5 @@
     <% } %>
     <%- body %>
     <% include ./partials/_scripts.ejs %>
-
   </body>
 </html>
